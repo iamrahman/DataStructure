@@ -28,7 +28,7 @@ void reverse()
         head = prev; 
 }
 
-void push(int new_data){
+void InsertNode(int new_data){
 	struct Node* new_node = (struct Node*) malloc(sizeof(struct Node)); 
 	new_node->data = new_data; 
 	new_node->next = head; 
@@ -45,10 +45,10 @@ void display(){
 }
 	
 int main(){
-	push(4);
-	push(3);
-	push(2);
-	push(1);
+	InsertNode(4);
+	InsertNode(3);
+	InsertNode(2);
+	InsertNode(1);
 	cout<<"Linked List:\n";
 	display();
 	cout<<"\nAfter Reverse:\n";
