@@ -19,7 +19,7 @@ void pop(){
 		cout<<"No Element is Present\n";
 	}
 	else{
-		Stack[top] = 0;
+		Stack[top] = NULL;
 		top = top-1;
 	}
 }
