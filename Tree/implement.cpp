@@ -80,6 +80,9 @@ void inorder(tree *p)
         cout<<p->data<<endl;
         inorder(p->right);
     }
+    else{
+		cout<<"Inorder Not Possiple Because Tree is Empty\n\n";
+	}
 }
 void preorder(tree *p)
 {
@@ -89,6 +92,9 @@ void preorder(tree *p)
         preorder(p->left);
         preorder(p->right);
     }
+    else{
+		cout<<"Preorder Not Possiple Because Tree is Empty\n\n";
+	}
 }
 void postorder(tree *p)
 {
@@ -98,6 +104,9 @@ void postorder(tree *p)
         postorder(p->right);
         cout<<p->data<<endl;
     }
+    else{
+		cout<<"Postorder Not Possiple Because Tree is Empty\n\n";
+	}
 }
 int main()
 {
