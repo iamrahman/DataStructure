@@ -1,6 +1,3 @@
-/*
-* C++ Program to Implement a Binary Search Tree using Linked Lists
- */
 #include <iostream>
 using namespace std;
 
@@ -117,5 +114,6 @@ int main()
     preorder(root);
     cout<<"Postorder Traversing\n";
     postorder(root);
+    cout<<"Height of the Tree\n"
     return 0;   
 }
