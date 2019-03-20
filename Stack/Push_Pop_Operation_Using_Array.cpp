@@ -19,7 +19,7 @@ void pop(){
 		cout<<"No Element is Present\n";
 	}
 	else{
-		Stack[top] = NULL;
+		Stack[top] = 0;
 		top = top-1;
 	}
 }
@@ -47,12 +47,18 @@ int main(){
 			cin>>number;
 			push(number);
 		}
-		if(ch=='2'){
+		else if(ch=='2'){
 			pop();
 		}
-		if(ch=='3'){
+		else if(ch=='3'){
 			display();
-		}	
+		}
+		else if(ch=='4'){
+			break;
+		}
+		else{
+			cout<<"Wrong Input\n";
+		}
 	}
 	display();
 }
