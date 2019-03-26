@@ -11,6 +11,7 @@ struct node
 
 void displayLeafNode(node* p)  
 {  
+	
     if((p->left == NULL) && (p->right == NULL)){
 		cout<<p->data;
 		return;
@@ -22,6 +23,24 @@ void displayLeafNode(node* p)
 		displayLeafNode(p->right);
 	}
 }  
+
+void displayNonLeafNode(node *p){
+	
+	if(p->left != NULL && p->right != NULL){
+		cout<<p->data;
+		displayNonLeafNode(p->left);
+		displayNonLeafNode(p->right);
+	}
+	
+	if(p->left != NULL && p->right == NULL){
+		cout<<p->data;
+		displayNonLeafNode(p->left);
+	}
+	if(p->right != NULL && p->left == NULL){
+		cout<<p->data;
+		displayNonLeafNode(p->right);
+	}
+}
   
 
 node* newNode(int data)  //Build a Tree using this function
@@ -45,9 +64,12 @@ int main()
     root->left->right = newNode(5);
     root->left->left->left = newNode(6);  
     root->left->right->right = newNode(7);
-    root->left->right->right->right = newNode(8);   
-      
+    root->left->right->right->right = newNode(8);
+    root->left->right->right->right->left = newNode(9	);  
+    cout<<"\nAll Leaf Node\n";
     displayLeafNode(root);
+    cout<<"\nAll Non-Leaf Node\n";
+    displayNonLeafNode(root);
     return 0;  
 }  
   
