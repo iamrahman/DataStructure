@@ -65,7 +65,7 @@ int main()
     root->left->left->left = newNode(6);  
     root->left->right->right = newNode(7);
     root->left->right->right->right = newNode(8);
-    root->left->right->right->right->left = newNode(9	);  
+    root->left->right->right->right->left = newNode(9);  
     cout<<"\nAll Leaf Node\n";
     displayLeafNode(root);
     cout<<"\nAll Non-Leaf Node\n";

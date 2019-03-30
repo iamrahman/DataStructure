@@ -33,6 +33,22 @@ void insertAtNthPosition(int newdata, int position){
 	ptr->next->prev = newnode;
 	
 }
+
+void insertAtEnd(int newdata){
+	
+	Node* newnode = new Node();
+	newnode->data = newdata;
+	struct Node* ptr =head;
+	
+	while(ptr->next != NULL){
+		ptr = ptr->next;
+	}
+	newnode->next = NULL;
+	newnode->prev = ptr;
+	ptr->next = newnode;
+	
+}
+
 void display() { 
    struct Node* ptr;
    ptr = head;  
@@ -40,14 +56,16 @@ void display() {
       cout<< ptr->data <<" "; 
       ptr = ptr->next; 
   } 
-} 
+}
+ 
 int main() { 
    insert(3);
    insert(1);
    insert(7);
    insert(2);
    insert(9);
-   insertAtNthPosition(8,2);
+   insertAtNthPosition(8,6);
+   insertAtEnd(10);
    cout<<"The doubly linked list is: ";
    display(); 
    return 0; 
