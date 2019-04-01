@@ -7,7 +7,7 @@ struct Node
 	struct Node *next; 
 }; 
 
-struct Node *addToEmpty(struct Node *last, int data) 
+struct Node *insertInEmptyCircularLinkedList(struct Node *last, int data) 
 { 
 	 
 	if (last != NULL) 
@@ -23,10 +23,10 @@ struct Node *addToEmpty(struct Node *last, int data)
 	return last; 
 } 
 
-struct Node *addBegin(struct Node *last, int data) 
+struct Node *insertAtBegin(struct Node *last, int data) 
 { 
 	if (last == NULL) 
-		return addToEmpty(last, data); 
+		return insertInEmptyCircularLinkedList(last, data); 
 
 	Node* temp = new Node();
 
@@ -37,10 +37,10 @@ struct Node *addBegin(struct Node *last, int data)
 	return last; 
 } 
 
-struct Node *addEnd(struct Node *last, int data) 
+struct Node *inserAtEnd(struct Node *last, int data) 
 { 
 	if (last == NULL) 
-		return addToEmpty(last, data); 
+		return insertInEmptyCircularLinkedList(last, data); 
 	
 	Node* temp = new Node();
 	temp -> data = data; 
@@ -51,7 +51,7 @@ struct Node *addEnd(struct Node *last, int data)
 	return last; 
 } 
 
-struct Node *addAfter(struct Node *last, int data, int item) 
+struct Node *insertAfterANode(struct Node *last, int data, int item) 
 { 
 	if (last == NULL) 
 		return NULL; 
@@ -74,12 +74,12 @@ struct Node *addAfter(struct Node *last, int data, int item)
 		p = p -> next; 
 	} while(p != last -> next); 
 
-	cout << item << " not present in the list." << endl; 
+	cout << item << " Not Present" << endl; 
 	return last; 
 
 } 
 
-void traverse(struct Node *last) 
+void display(struct Node *last) 
 { 
 	struct Node *p; 
 
@@ -105,14 +105,14 @@ int main()
 { 
 	struct Node *last = NULL; 
 
-	last = addToEmpty(last, 6); 
-	last = addBegin(last, 4); 
-	last = addBegin(last, 2); 
-	last = addEnd(last, 8); 
-	last = addEnd(last, 12); 
-	last = addAfter(last, 10, 8); 
+	last = insertInEmptyCircularLinkedList(last, 6); 
+	last = insertAtBegin(last, 4); 
+	last = insertAtBegin(last, 2); 
+	last = inserAtEnd(last, 8); 
+	last = inserAtEnd(last, 12); 
+	last = insertAfterANode(last, 10, 8); 
 
-	traverse(last); 
+	display(last); 
 
 	return 0; 
 } 
