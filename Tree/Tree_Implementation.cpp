@@ -31,16 +31,22 @@ void insertNode(Tree *root){
 		root->left = newNode(left);
 		Tree *root_left = root->left;
 		insertNode(root_left);
-		//insertNode(root_left->right);
+		ch = 'r';
+		insertNode(root_left->right);
 	}
 	else if(ch=='r'){
 		cout<<"Enter Number\n";
 		cin>>right;
 		root->right = newNode(right);
 		Tree *root_right = root->right;
-		insertNode(root_right);	
-		//insertNode(root_right->left);
+		insertNode(root_right);
+		ch = 'l';
+		insertNode(root_right->left);
 	}
+	else{
+		return;
+	}
+		
 }
 
 void inorder(Tree *p)
