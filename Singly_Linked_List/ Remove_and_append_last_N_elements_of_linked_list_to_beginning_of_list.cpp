@@ -66,7 +66,7 @@ int main(){
 	insertLinkedList(8);
 	cout<<"Before:\n";
 	display();
-	head = addLastNElementToFirst(head, 3);
+	head = addLastNElementToFirst(head, 2);
 	cout<<"\nAfter:\n";
 	display();
 }
