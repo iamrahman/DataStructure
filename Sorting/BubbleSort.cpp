@@ -14,7 +14,7 @@ void swapElement(int *xp, int *yp)
 void bubbleSorting(int arr[], int n) 
 { 
    int i, j; 
-   bool swapped; 
+   b swapped; 
    for (i = 0; i < n-1; i++) 
    { 
      swapped = false; 
