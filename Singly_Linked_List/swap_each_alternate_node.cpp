@@ -39,7 +39,14 @@ void pairWiseSwap(struct Node *head)
     while (temp != NULL && temp->next != NULL) 
     { 
         
-        swap(&temp->data, &temp->next->data); 
+        swap(&temp->data, &temp->next->data);
+        
+                   //OR
+                    
+        //int temp_data = temp->data;
+        //temp->data = temp->next->data;
+        //temp->next->data = temp_data;
+        
         temp = temp->next->next; 
     } 
 }
