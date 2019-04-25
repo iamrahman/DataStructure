@@ -1,29 +1,31 @@
 #include <iostream>
-#include <algorithm>
+#include <cstring>
+
 using namespace std;
 
-void permutations(string str, int n, string res)
-{
-    if (n == 1)
-    {
-        cout << res + str << endl;
-        return;
-    }
-    
-    for (int i = 0; i < n; i++)
-    {
-        permutations(str.substr(1), n - 1, res + str[0]);
- 
-        rotate(str.begin(), str.begin() + 1, str.end());
-    }
-}
- 
+void permute (char[], int, int);
 int main()
 {
-    string str = "ABC";
-    string res;    // empty string
- 
-    permutations(str, str.size(), res);
- 
+    char a[] = "ABCD";
+    int n = strlen(a)-1;
+    permute(a, 0, n);
+
     return 0;
+}
+
+void permute(char a[], int i, int n)
+{
+   int j;
+   if (i == n)
+     cout << a << endl;
+   else
+   {
+       for (j = i; j <= n; j++)
+       {
+          swap(a[i], a[j]);
+          permute(a, i+1, n);
+          swap(a[i], a[j]);
+
+       }
+   }
 }

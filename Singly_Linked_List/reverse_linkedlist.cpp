@@ -38,7 +38,7 @@ void InsertNode(int new_data){
 void display(){
 	struct Node* traverse = head;
 	while(traverse != NULL){
-		cout<<traverse->data;
+		cout<<traverse->data<<" ";
 		traverse = traverse->next;
 		
 	}
