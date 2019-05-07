@@ -1,6 +1,6 @@
 #include <iostream> 
-using namespace std; 
-  
+using namespace std;
+
 struct node  
 {  
     int data;  
@@ -22,8 +22,8 @@ int maxDepth(node* node)
             return(lDepth + 1);  
         else return(rDepth + 1);  
     }  
-}  
-  
+}
+
 
 node* newNode(int data)  //Build a Tree using this function
 {  
