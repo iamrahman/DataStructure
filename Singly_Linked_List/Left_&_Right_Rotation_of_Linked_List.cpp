@@ -52,6 +52,20 @@ void rotateRight(){
 	ptr1->next = NULL;
 }
 
+// You can do using this also
+// void rotationRight(){
+	
+// 	cout<<"\nRight Rotation\n";
+// 	struct Node* last = head;
+// 	while(last->next->next != NULL)
+// 	{
+// 		last = last->next;
+// 	}
+// 	int last_data = last->next->data;
+// 	insertNode(last_data);
+// 	last->next = NULL;
+// }
+
 void rotateLeft(){
 	insertAtEnd(head->data);
 	head = head->next;
