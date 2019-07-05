@@ -17,4 +17,3 @@ findSecoundLargest(A, size);
 // 2. Sort the Array in Assending order
 // 3. Print the Last secound element whose index will be (length-2)
 
-
